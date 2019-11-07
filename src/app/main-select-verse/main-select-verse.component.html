@@ -7,16 +7,18 @@
 </mat-tab>
 
 <mat-tab label="Chapters">
-		<mat-grid-list cols="4" rowHeight = "100px">
-		<button mat-grid-tile *ngFor ="let chapter of this.chapters" (click)="selectVerse(chapter)"> 
-			{{chapter}} </button>
+		<mat-grid-list cols="4">	
+		 <mat-grid-tile *ngFor ="let chapter of this.chapters" colspan="1">
+			<button(click)="selectVerse(chapter)">{{chapter}}</button>
+		 </mat-grid-tile> 	
 		</mat-grid-list>
 </mat-tab>
 
 <mat-tab label="Verses">
-		<mat-grid-list cols="4" rowHeight = "100px">
-		<button mat-grid-tile *ngFor ="let verse of this.verses" (click)="showVerse(verse)"> 
-			{{verse}} </button>
+		<mat-grid-list cols="4">
+		 <mat-grid-tile *ngFor ="let verse of this.verses" colspan="1">	
+		    <button(click)="showVerse(verse)">{{verse}}</button>
+		 </mat-grid-tile>
 		</mat-grid-list>
 </mat-tab>
 
