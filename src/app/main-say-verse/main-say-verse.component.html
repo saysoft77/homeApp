@@ -1,1 +1,9 @@
-<p>{{theVerse}}</p>
+<div class="mat-card-cvr">
+ <mat-accordion class="mat-card-cont">
+  <mat-expansion-panel #mep="matExpansionPanel" [expanded]="true" [hideToggle]="true">
+    <mat-expansion-panel-header></mat-expansion-panel-header>
+	<p>{{theVerse}}</p>
+ </mat-expansion-panel>
+ <button mat-fab class="vButton" (click)="mep.expanded=!mep.expanded">Say Verse</button>
+ </mat-accordion>
+</div>

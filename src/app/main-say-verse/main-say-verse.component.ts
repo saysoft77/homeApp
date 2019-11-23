@@ -17,5 +17,10 @@ export class MainSayVerseComponent implements OnInit {
   this.theVerse = this.getVerseService.theVerse;
   
   }
+  
+  flipCard(){
+  console.log("flipCard")
+  
+  }
 
 }

@@ -2,23 +2,32 @@
 	
 <mat-tab label="Book">
 		<mat-action-list *ngFor="let book of books"> 
-	    <button mat-list-item (click)="selectChapters(book.bNum)"> {{book.bName}} </button>
+	     <button mat-list-item 
+	     (click)="selectChapters(book.bNum)"> 
+			{{book.bName}} 
+		 </button>
 		</mat-action-list>	
 </mat-tab>
 
 <mat-tab label="Chapters">
 		<mat-grid-list cols="4">	
-		 <mat-grid-tile *ngFor ="let chapter of this.chapters" colspan="1">
-			<button(click)="selectVerse(chapter)">{{chapter}}</button>
-		 </mat-grid-tile> 	
+		 <mat-grid-tile
+		  (click)="selectVerse(chapter)" 
+		  *ngFor ="let chapter of this.chapters" 
+		  colspan="1">
+		   {{chapter}} 
+		 </mat-grid-tile>
 		</mat-grid-list>
 </mat-tab>
 
 <mat-tab label="Verses">
 		<mat-grid-list cols="4">
-		 <mat-grid-tile *ngFor ="let verse of this.verses" colspan="1">	
-		    <button(click)="showVerse(verse)">{{verse}}</button>
-		 </mat-grid-tile>
+		 <mat-grid-tile 
+		 (click)="showVerse(verse)"
+		 *ngFor ="let verse of this.verses" 
+		 colspan="1">	
+		    {{verse}}
+	     </mat-grid-tile>
 		</mat-grid-list>
 </mat-tab>
 
